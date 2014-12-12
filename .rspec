@@ -1,3 +1,4 @@
+--require power_assert
 --require spec_helper
 --format Fuubar
 --color

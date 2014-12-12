@@ -20,8 +20,13 @@
 
 root_dir = File.expand_path(File.dirname(__FILE__) + "/..")
 Dir["#{root_dir}/lib/**/*.rb"].each { |f| require f }
-
+require 'rspec-power_assert'
 RSpec.configure do |config|
+
+  # use power assert
+  RSpec::PowerAssert.example_assertion_alias :assert
+  RSpec::PowerAssert.example_group_assertion_alias :asserted_by
+
   # The settings below are suggested to provide a good initial experience
   # with RSpec, but feel free to customize to your heart's content.
   # These two settings work together to allow you to limit a spec run
